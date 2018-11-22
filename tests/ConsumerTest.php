@@ -11,7 +11,11 @@ class ConsumerTest extends \PHPUnit_Framework_TestCase
     */
     public function testNombreCompleto()
     {
-
+$consumer = new Dummy();
+$consumer->setNombre('Carolina');
+$consumer->setApellido('Pino');
+$result = $consumer->nombreCompleto();
+$this->assertEquals('Carolina Pino', $result);
     }
 
     /**
